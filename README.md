@@ -26,7 +26,7 @@ Create an instance of the class while passing in an array including your Instanc
   $scribe = new Scribe($config);
 
   //you can change the list_id you are referring to at any point
-  $scribe->set_list_id('new_list_id');
+  $scribe->setListId('new_list_id');
 ```
 
 #Methods
@@ -72,29 +72,29 @@ Unsubscribes the provided e-mail address (if it exists) from the current list.
   $results = $scribe->unsubscribe('jdoe@example.com');
 ```
 
-##subscription_status($email)
+##subscriptionStatus($email)
 
 Returns the status of the user with the provided e-mail address (if it exists) in the current list.
 ```php
-  $results = $scribe->subscription_status('jdoe@example.com');
+  $results = $scribe->subscriptionStatus('jdoe@example.com');
 ```
 __PS:__ refer to http://sendy.co/api for the types of return messages you can expect.
 
-##active_subscriber_count()
+##activeSubscriberCount()
 
 Returns the number of subscribers to the current list.
 ```php
-  $results = $scribe->active_subscriber_count();
+  $results = $scribe->activeSubscriberCount();
 ```
 
-##set_list_id($list_id) and get_list_id()
+##setListId($list_id) and getListId()
 
 Change or get the list you are currently working with.
 ```php
 
   //set or switch the list id
-  $scribe->set_list_id('new_list_id');
+  $scribe->setListId('new_list_id');
 
   //get the current list id
-  echo $scribe->get_list_id();
+  echo $scribe->getListId();
 ```

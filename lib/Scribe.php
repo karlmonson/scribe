@@ -51,7 +51,7 @@ class Scribe {
         $this->list_id = $list_id;
     }
 
-    public function set_list_id($list_id)
+    public function setListId($list_id)
     {
         if (empty($list_id)):
             throw new \Exception("Required parameter [list_id] is not set", 1);
@@ -60,7 +60,7 @@ class Scribe {
         $this->list_id = $list_id;
     }
 
-    public function get_list_id()
+    public function getListId()
     {
         return $this->list_id;
     }
@@ -124,7 +124,7 @@ class Scribe {
         endif;
     }
 
-    public static function subscription_status($email)
+    public static function subscriptionStatus($email)
     {
         if (empty($email)):
             throw new \Exception("Required parameter [email] is not set", 1);
@@ -154,7 +154,7 @@ class Scribe {
         endif;
     }
 
-    public static function active_subscriber_count()
+    public static function activeSubscriberCount()
     {
         $postdata = http_build_query(
             array(
@@ -179,7 +179,7 @@ class Scribe {
         endif;
     }
 
-    public static function create_campaign($from_name, $from_email, $reply_to, $subject, $plain_text, $html_text, $list_ids = null, $brand_id = null, $send_campaign = null)
+    public static function createCampaign($from_name, $from_email, $reply_to, $subject, $plain_text, $html_text, $list_ids = null, $brand_id = null, $send_campaign = null)
     {
         $postdata = http_build_query(
             array(
