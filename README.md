@@ -35,19 +35,19 @@ After creating a new instance of Scribe call any of the methods below
 ##Return Values
 The return value of any of these functions will include both a status, and a message to go with that status.
 
-The status is a boolean value of `true` or `false` and the message will vary based on the type of action being performed.
+The status is a string value of `success` or `error` and the message will vary based on the type of action being performed.
 
 ```php
   //example of a succesful return value
   array(
     'status' => 'success',
-    'message' => 'jdoe@example.com subscribed'
+    'message' => 'Subscribed'
   )
 
   //example of an unsuccesful return value
   array(
     'status' => 'error',
-    'message' => 'jdoe@example.com already subscribed'
+    'message' => 'Already subscribed'
   )
 ```
 

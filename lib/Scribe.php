@@ -88,7 +88,7 @@ class Scribe {
         $result = file_get_contents($this->instance.'/subscribe', false, $context);
 
         if($result == 1):
-            return array('status' => 'success', 'message' => $email . ' subscribed');
+            return array('status' => 'success', 'message' => 'Subscribed');
         else:
             return array('status' => 'error', 'message' => $result);
         endif;
