@@ -14,7 +14,7 @@ The Unofficial PHP Sendy API Wrapper ([http://sendy.co](http://sendy.co))
 
 #Usage
 
-Create an instance of the class while passing in an array including your API key, installation URL, and the List ID you wish to work with.
+Create an instance of the class while passing in an array including your Instance URL, API Key, and the List ID you wish to work with.
 ```php
 
   $config = array(
