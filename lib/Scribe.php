@@ -124,7 +124,7 @@ class Scribe {
         endif;
     }
 
-    public static function subscriptionStatus($email)
+    public function subscriptionStatus($email)
     {
         if (empty($email)):
             throw new \Exception("Required parameter [email] is not set", 1);
@@ -154,7 +154,7 @@ class Scribe {
         endif;
     }
 
-    public static function activeSubscriberCount()
+    public function activeSubscriberCount()
     {
         $postdata = http_build_query(
             array(
@@ -179,7 +179,7 @@ class Scribe {
         endif;
     }
 
-    public static function createCampaign($from_name, $from_email, $reply_to, $subject, $plain_text, $html_text, $list_ids = null, $brand_id = null, $send_campaign = null)
+    public function createCampaign($from_name, $from_email, $reply_to, $subject, $plain_text, $html_text, $list_ids = null, $brand_id = null, $send_campaign = null)
     {
         $postdata = http_build_query(
             array(
